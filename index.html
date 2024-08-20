@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>freeteen</title>
+<meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
+<link href="Безымянный1.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script>
+  // Функция генерации случайного пароля
+  function generatePassword(length) {
+      const charset = "~!@(0123456789~!@(abcdefghijklmn^&*_opqrstuvwxyz#$%)+0123456789-ABCDEFGHIJKLMN^&*_OPQRSTUVWXYZ^&*_0123456789#$%)+";
+      let password = "";
+      for (let i = 0; i < length; i++) {
+          const randomIndex = Math.floor(Math.random() * charset.length);
+          password += charset[randomIndex];
+      }
+      return password;
+  }
+
+  // Функция копирования текста в буфер обмена
+  function copyToClipboard(text) {
+      return new Promise((resolve, reject) => {
+          const el = document.createElement('textarea');
+          el.value = text;
+          document.body.appendChild(el);
+          el.select();
+          const successful = document.execCommand('copy');
+          document.body.removeChild(el);
+          if (successful) {
+              resolve();
+          } else {
+              reject('Failed to copy text');
+          }
+      });
+  }
+
+  // Обработчики событий после загрузки страницы
+  document.addEventListener('DOMContentLoaded', function() {
+      // Обработчик для кнопки генерации пароля
+      document.getElementById('generateButton').addEventListener('click', () => {
+          const passwordLength = 15; // Длина пароля
+          const newPassword = generatePassword(passwordLength);
+          document.getElementById('passwordText').innerText = newPassword;
+      });
+
+      // Обработчик для кнопки копирования пароля
+      document.getElementById('copyButton').addEventListener('click', () => {
+          const password = document.getElementById('passwordText').innerText;
+          if (password) {
+              copyToClipboard(password)
+                  .then(() => {
+                      const notification = document.getElementById('copyNotification');
+                      notification.innerText = "PASSWORD COPIED!";
+                      notification.style.display = 'block';
+                      setTimeout(() => {
+                          notification.style.display = 'none';
+                      }, 2000);
+                  })
+                  .catch((err) => {
+                      console.error("Failed to copy text", err);
+                  });
+          } else {
+              console.error("No text to copy");
+          }
+      });
+  });
+</script>
+
+</head>
+<body>
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:402px;top:596px;width:396px;height:74px;text-align:center;z-index:0;">
+<span style="color:#FF0000;font-family:'Comic Sans MS';font-size:27px;"><strong>NO WEB CAMS ! <br>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ONLY PORN !</strong></span></div>
+<div id="wb_Image2" style="position:absolute;left:39px;top:104px;width:1122px;height:435px;z-index:1;">
+<img src="images/HACKED2-Photoroom.png" id="Image2" alt="" width="1122" height="436"></div>
+<div id="wb_Image3" style="position:absolute;left:192px;top:165px;width:141px;height:138px;z-index:2;">
+<img src="images/how-protect-webcam-from-being-hacked-icon-Photoroom.png" id="Image3" alt="" width="141" height="137"></div>
+<div id="wb_Image4" style="position:absolute;left:914px;top:165px;width:141px;height:138px;z-index:3;">
+<img src="images/how-protect-webcam-from-being-hacked-icon-Photoroom.png" id="Image4" alt="" width="141" height="137"></div>
+<div id="wb_Image6" style="position:absolute;left:672px;top:318px;width:208px;height:242px;z-index:4;">
+<img src="images/1images-removebg-preview.png" id="Image6" alt="" width="208" height="242"></div>
+<div id="wb_Image5" style="position:absolute;left:402px;top:442px;width:301px;height:167px;z-index:5;">
+<img src="images/step-Photoroom.png" id="Image5" alt="" width="301" height="167"></div>
+<div id="wb_Image1" style="position:absolute;left:557px;top:28px;width:86px;height:86px;z-index:6;">
+<img src="images/84732d185982a5507f2bcc9d831b25f5-removebg-preview.png" id="Image1" alt="" width="86" height="86"></div>
+<div id="wb_Image7" style="position:absolute;left:549px;top:710px;width:102px;height:98px;z-index:7;">
+<img src="images/step-1-removebg-preview (1).png" id="Image7" alt="" width="102" height="99"></div>
+<div id="wb_Image8" style="position:absolute;left:275px;top:1242px;width:99px;height:95px;z-index:8;">
+<img src="images/step-2-removebg-preview (1).png" id="Image8" alt="" width="99" height="96"></div>
+<div id="wb_Image9" style="position:absolute;left:179px;top:1244px;width:96px;height:90px;z-index:9;">
+<img src="images/step-3-removebg-preview (1).png" id="Image9" alt="" width="96" height="91"></div>
+<!-- pass -->
+<div id="Html1" style="position:absolute;left:395px;top:808px;width:411px;height:195px;z-index:10">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор пароля</title>
+    </head>
+<body>
+    <div class="container">
+        <h1>Генератор пароля</h1>
+        <input type="text" id="password" readonly>
+        <button class="button" onclick="generatePassword()">Сгенерировать пароль</button>
+        <button class="button" onclick="copyPassword()">Скопировать пароль</button>
+        <div id="notification">Пароль скопирован!</div>
+    </div>
+
+    <script>
+        function generatePassword() {
+            const length = 12;
+            const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:',.<>?/";
+            let password = "";
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * charset.length);
+                password += charset[randomIndex];
+            }
+            document.getElementById("password").value = password;
+        }
+
+        function copyPassword() {
+            const passwordField = document.getElementById("password");
+            passwordField.select();
+            document.execCommand("copy");
+
+            const notification = document.getElementById("notification");
+            notification.style.display = "block";
+            setTimeout(() => {
+                notification.style.display = "none";
+            }, 3000); // Показывать уведомление 2 секунды
+        }
+    </script>
+</body>
+</html>
+</div>
+</div>
+</body>
+</html>
