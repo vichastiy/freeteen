@@ -16,44 +16,49 @@
       padding: 20px;
       position: relative;
     }
-    /* Стили для текста с сохранением исходных цветов и улучшенной адаптивностью */
+    /* Стили для текста с увеличением размера в 2.5 раза */
     #wb_Text1, #wb_Text2, #wb_Text3 {
       text-align: center;
       font-family: Arial, sans-serif;
       color: #FFFFFF;
-      margin: 10px 0;
+      margin: 20px 0;
     }
     #wb_Text1 {
-      font-size: 2rem; /* Основной размер для десктопа */
+      font-size: 6.25rem; /* Увеличение размера для десктопа */
     }
     #wb_Text2, #wb_Text3 {
-      font-size: 1.8rem;
+      font-size: 5.5rem;
       color: #FFFF00;
     }
     #wb_Text2 strong, #wb_Text3 strong {
       color: #FFFF00;
     }
     /* Адаптивные изображения */
-    #wb_Image1 img, #wb_Image2 img, #wb_Image3 img, #wb_Image4 img {
+    #wb_Image1 img, #wb_Image2 img, #wb_Image3 img {
       max-width: 100%;
+      height: auto;
+    }
+    /* Увеличение изображения "CONFIRM 18+" */
+    #wb_Image4 img {
+      width: 575px; /* Увеличение изображения в 2.5 раза */
       height: auto;
     }
     /* Центрирование кнопки */
     #wb_Image4 {
       display: flex;
       justify-content: center;
-      margin: 20px 0;
+      margin: 40px 0;
     }
     /* Мобильные стили для текста */
     @media only screen and (max-width: 768px) {
       #wb_Text1 {
-        font-size: 1.5rem; /* Уменьшенный размер на мобильных */
+        font-size: 3rem; /* Уменьшенный размер на мобильных */
       }
       #wb_Text2, #wb_Text3 {
-        font-size: 1.4rem;
+        font-size: 2.75rem;
       }
       #wb_Image4 img {
-        width: 70%;
+        width: 100%; /* Масштабирование кнопки на мобильных */
       }
     }
   </style>
