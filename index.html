@@ -3,92 +3,44 @@
 <head>
   <meta charset="utf-8">
   <title>Freeteen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
   <link href="Безымянный2.css" rel="stylesheet">
   <link href="index.css" rel="stylesheet">
+  <!-- Подключаем i18next -->
   <script src="https://unpkg.com/i18next@20.3.5/dist/umd/i18next.min.js"></script>
-  <style>
-    /* Основной контейнер для адаптивного центрирования */
-    #container {
-      max-width: 970px;
-      margin: 0 auto;
-      padding: 20px;
-      position: relative;
-    }
-    /* Стили для текста с сохранением исходных цветов и улучшенной адаптивностью */
-    #wb_Text1, #wb_Text2, #wb_Text3 {
-      text-align: center;
-      font-family: Arial, sans-serif;
-      color: #FFFFFF;
-      margin: 10px 0;
-    }
-    #wb_Text1 {
-      font-size: 2rem; /* Основной размер для десктопа */
-    }
-    #wb_Text2, #wb_Text3 {
-      font-size: 1.8rem;
-      color: #FFFF00;
-    }
-    #wb_Text2 strong, #wb_Text3 strong {
-      color: #FFFF00;
-    }
-    /* Адаптивные изображения */
-    #wb_Image1 img, #wb_Image2 img, #wb_Image3 img, #wb_Image4 img {
-      max-width: 100%;
-      height: auto;
-    }
-    /* Центрирование кнопки */
-    #wb_Image4 {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-    }
-    /* Мобильные стили для текста */
-    @media only screen and (max-width: 768px) {
-      #wb_Text1 {
-        font-size: 1.5rem; /* Уменьшенный размер на мобильных */
-      }
-      #wb_Text2, #wb_Text3 {
-        font-size: 1.4rem;
-      }
-      #wb_Image4 img {
-        width: 70%;
-      }
-    }
-  </style>
 </head>
 <body>
 <div id="space"><br></div>
 <div id="container">
-  <div id="wb_Text1">
-    <span data-i18n="welcome"><strong>ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO</strong></span>
+  <div id="wb_Text1" style="position:absolute;left:2px;top:30px;width:967px;height:77px;text-align:center;z-index:0;">
+    <span style="color:#FFFFFF;font-family:Arial;font-size:35px;" data-i18n="welcome"><strong>ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO</strong></span>
   </div>
-  <div id="wb_Text2">
-    <span data-i18n="registration"><strong>REGISTRATION IN TWO CLICKS<br>WITHOUT E-MAIL CONFIRMATION</strong></span>
+  <div id="wb_Text2" style="position:absolute;left:2px;top:131px;width:967px;height:77px;text-align:center;z-index:1;">
+    <span style="color:#FFFF00;font-family:Arial;font-size:35px;" data-i18n="registration"><strong>REGISTRATION IN TWO CLICKS<br>WITHOUT E-MAIL CONFIRMATION</strong></span>
   </div>
-  <div id="wb_Image1">
+  <div id="wb_Image1" style="position:absolute;left:229px;top:255px;width:512px;height:912px;z-index:2;">
     <a href="https://avaihamsisoat.com/please-confirm/750/16577/?z=8481223&b=22470173&var={SOURCE_ID}&ymid={CLICK_ID}" target="_blank">
-      <img src="images/test21.png" id="Image1" alt="">
+      <img src="images/test21.png" id="Image1" alt="" width="512" height="912">
     </a>
   </div>
-  <div id="wb_Text3">
-    <span data-i18n="redirect"><strong>AUTO REDIRECT TO MORE THAN 380000<br>FULL VIDEOS</strong></span>
+  <div id="wb_Text3" style="position:absolute;left:2px;top:1728px;width:967px;height:77px;text-align:center;z-index:3;">
+    <span style="color:#FFFF00;font-family:Arial;font-size:35px;" data-i18n="redirect"><strong>AUTO REDIRECT TO MORE THAN 380000<br>FULL VIDEOS</strong></span>
   </div>
-  <div id="wb_Image2">
-    <img src="images/xvideo.png" id="Image2" alt="">
+  <div id="wb_Image2" style="position:absolute;left:3px;top:1231px;width:967px;height:486px;z-index:4;">
+    <img src="images/xvideo.png" id="Image2" alt="" width="967" height="487">
   </div>
-  <div id="wb_Image3">
-    <img src="images/1.png" id="Image3" alt="">
+  <div id="wb_Image3" style="position:absolute;left:135px;top:1880px;width:701px;height:1163px;z-index:5;">
+    <img src="images/1.png" id="Image3" alt="" width="701" height="1164">
   </div>
-  <div id="wb_Image4">
+  <div id="wb_Image4" style="position:absolute;left:371px;top:3087px;width:231px;height:58px;z-index:6;">
     <a href="https://avaihamsisoat.com/please-confirm/750/16577/?z=8481223&b=22470173&var={SOURCE_ID}&ymid={CLICK_ID}" target="_blank">
-      <img src="images/CONFIRM 18+.png" id="Image4" alt="">
+      <img src="images/CONFIRM 18+.png" id="Image4" alt="" width="231" height="58">
     </a>
   </div>
 </div>
 
 <script>
+  // Определяем переводы для языков TIER 1, 2 и 3
   const resources = {
     en: { translation: { welcome: "ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO", registration: "REGISTRATION IN TWO CLICKS<br>WITHOUT E-MAIL CONFIRMATION", redirect: "AUTO REDIRECT TO MORE THAN 380000<br>FULL VIDEOS" }},
     es: { translation: { welcome: "RESPONDE UNAS PREGUNTAS SENCILLAS PARA VER EL VIDEO COMPLETO", registration: "REGISTRO EN DOS CLICS<br>SIN CONFIRMACIÓN DE CORREO ELECTRÓNICO", redirect: "REDIRECCIÓN AUTOMÁTICA A MÁS DE 380000<br>VIDEOS COMPLETOS" }},
@@ -104,6 +56,7 @@
     ko: { translation: { welcome: "전체 비디오를 보려면 간단한 질문에 답변하세요", registration: "이메일 확인 없이 두 번 클릭으로 등록", redirect: "38만 개 이상의 전체 비디오로 자동 리디렉션" }}
   };
 
+  // Инициализация i18next с ресурсами
   i18next.init({
     lng: navigator.language || navigator.userLanguage,
     fallbackLng: 'en',
