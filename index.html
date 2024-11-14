@@ -40,44 +40,20 @@
 </div>
 
 <script>
-  // Определяем переводы для всех языков
+  // Определяем переводы для языков TIER 1, 2 и 3
   const resources = {
-    en: {
-      translation: {
-        welcome: "ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO",
-        registration: "REGISTRATION IN TWO CLICKS<br>WITHOUT E-MAIL CONFIRMATION",
-        redirect: "AUTO REDIRECT TO MORE THAN 380000<br>FULL VIDEOS"
-      }
-    },
-    es: {
-      translation: {
-        welcome: "RESPONDE UNAS PREGUNTAS SENCILLAS PARA VER EL VIDEO COMPLETO",
-        registration: "REGISTRO EN DOS CLICS<br>SIN CONFIRMACIÓN DE CORREO ELECTRÓNICO",
-        redirect: "REDIRECCIÓN AUTOMÁTICA A MÁS DE 380000<br>VIDEOS COMPLETOS"
-      }
-    },
-    fr: {
-      translation: {
-        welcome: "RÉPONDEZ À QUELQUES QUESTIONS SIMPLES POUR REGARDER LA VIDÉO COMPLÈTE",
-        registration: "INSCRIPTION EN DEUX CLICS<br>SANS CONFIRMATION PAR E-MAIL",
-        redirect: "REDIRECTION AUTOMATIQUE VERS PLUS DE 380000<br>VIDÉOS COMPLÈTES"
-      }
-    },
-    de: {
-      translation: {
-        welcome: "BEANTWORTEN SIE EINIGE EINFACHE FRAGEN, UM DAS GANZE VIDEO ZU SEHEN",
-        registration: "REGISTRIERUNG IN ZWEI KLICKS<br>OHNE E-MAIL-BESTÄTIGUNG",
-        redirect: "AUTOMATISCHE WEITERLEITUNG ZU MEHR ALS 380000<br>VOLLSTÄNDIGEN VIDEOS"
-      }
-    },
-    ru: {
-      translation: {
-        welcome: "ОТВЕТЬТЕ НА НЕСКОЛЬКО ПРОСТЫХ ВОПРОСОВ, ЧТОБЫ ПОСМОТРЕТЬ ПОЛНОЕ ВИДЕО",
-        registration: "РЕГИСТРАЦИЯ В ДВА КЛИКА<br>БЕЗ ПОДТВЕРЖДЕНИЯ E-MAIL",
-        redirect: "АВТОМАТИЧЕСКОЕ ПЕРЕНАПРАВЛЕНИЕ НА БОЛЕЕ 380000<br>ПОЛНЫХ ВИДЕО"
-      }
-    },
-    // Добавьте другие языки (итальянский, китайский, японский, корейский и т.д.) по аналогии с вышеуказанными примерами.
+    en: { translation: { welcome: "ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO", registration: "REGISTRATION IN TWO CLICKS<br>WITHOUT E-MAIL CONFIRMATION", redirect: "AUTO REDIRECT TO MORE THAN 380000<br>FULL VIDEOS" }},
+    es: { translation: { welcome: "RESPONDE UNAS PREGUNTAS SENCILLAS PARA VER EL VIDEO COMPLETO", registration: "REGISTRO EN DOS CLICS<br>SIN CONFIRMACIÓN DE CORREO ELECTRÓNICO", redirect: "REDIRECCIÓN AUTOMÁTICA A MÁS DE 380000<br>VIDEOS COMPLETOS" }},
+    fr: { translation: { welcome: "RÉPONDEZ À QUELQUES QUESTIONS SIMPLES POUR REGARDER LA VIDÉO COMPLÈTE", registration: "INSCRIPTION EN DEUX CLICS<br>SANS CONFIRMATION PAR E-MAIL", redirect: "REDIRECTION AUTOMATIQUE VERS PLUS DE 380000<br>VIDÉOS COMPLÈTES" }},
+    de: { translation: { welcome: "BEANTWORTEN SIE EINIGE EINFACHE FRAGEN, UM DAS GANZE VIDEO ZU SEHEN", registration: "REGISTRIERUNG IN ZWEI KLICKS<br>OHNE E-MAIL-BESTÄTIGUNG", redirect: "AUTOMATISCHE WEITERLEITUNG ZU MEHR ALS 380000<br>VOLLSTÄNDIGEN VIDEOS" }},
+    ru: { translation: { welcome: "ОТВЕТЬТЕ НА НЕСКОЛЬКО ПРОСТЫХ ВОПРОСОВ, ЧТОБЫ ПОСМОТРЕТЬ ПОЛНОЕ ВИДЕО", registration: "РЕГИСТРАЦИЯ В ДВА КЛИКА<br>БЕЗ ПОДТВЕРЖДЕНИЯ E-MAIL", redirect: "АВТОМАТИЧЕСКОЕ ПЕРЕНАПРАВЛЕНИЕ НА БОЛЕЕ 380000<br>ПОЛНЫХ ВИДЕО" }},
+    pt: { translation: { welcome: "RESPONDA ALGUMAS PERGUNTAS SIMPLES PARA ASSISTIR AO VÍDEO COMPLETO", registration: "REGISTRO EM DOIS CLIQUES<br>SEM CONFIRMAÇÃO DE E-MAIL", redirect: "REDIRECIONAMENTO AUTOMÁTICO PARA MAIS DE 380000<br>VÍDEOS COMPLETOS" }},
+    it: { translation: { welcome: "RISPONDI ALCUNE DOMANDE SEMPLICI PER GUARDARE IL VIDEO COMPLETO", registration: "REGISTRAZIONE IN DUE CLIC<br>SENZA CONFERMA DI E-MAIL", redirect: "REINDIRIZZAMENTO AUTOMATICO A PIÙ DI 380000<br>VIDEO COMPLETI" }},
+    tr: { translation: { welcome: "TAM VİDEOYU İZLEMEK İÇİN BİRKAÇ BASİT SORUYU CEVAPLAYIN", registration: "E-POSTA ONAYI OLMADAN<br>İKİ TIKLA KAYIT", redirect: "380000'DEN FAZLA TAM VİDEOYA OTOMATİK YÖNLENDİRME" }},
+    ar: { translation: { welcome: "أجب على بعض الأسئلة البسيطة لمشاهدة الفيديو بالكامل", registration: "التسجيل بنقرتين دون<br>تأكيد البريد الإلكتروني", redirect: "إعادة توجيه تلقائية إلى أكثر من 380000 فيديو كامل" }},
+    zh: { translation: { welcome: "回答几个简单的问题即可观看完整视频", registration: "两次点击注册<br>无需电子邮件确认", redirect: "自动跳转到超过380000个完整视频" }},
+    ja: { translation: { welcome: "ビデオ全編を視聴するには、いくつかの簡単な質問に答えてください", registration: "メール確認なしで<br>ワンクリックで登録", redirect: "380000以上のフルビデオに自動リダイレクト" }},
+    ko: { translation: { welcome: "전체 비디오를 보려면 간단한 질문에 답변하세요", registration: "이메일 확인 없이 두 번 클릭으로 등록", redirect: "38만 개 이상의 전체 비디오로 자동 리디렉션" }}
   };
 
   // Инициализация i18next с ресурсами
