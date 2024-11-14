@@ -1,35 +1,147 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Безымянная страница</title>
-<meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
-<link href="Безымянный1.css" rel="stylesheet">
-<link href="index.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Freeteen</title>
+  <meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
+  <link href="Безымянный1.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+  <!-- Подключаем i18next -->
+  <script src="https://unpkg.com/i18next@20.3.5/dist/umd/i18next.min.js"></script>
 </head>
 <body>
+<div id="space"><br></div>
 <div id="container">
-<div id="wb_Image1" style="position:absolute;left:3px;top:176px;width:802px;height:403px;z-index:0;">
-<img src="images/xvideo.png" id="Image1" alt="" width="802" height="404"></div>
-<div id="Html1" style="position:absolute;left:280px;top:681px;width:248px;height:100px;z-index:1">
-<div style="text-align: center;">
-  <button id="confirmButton" onclick="redirect()">Confirm 18+</button>
+  <div id="wb_Image1" style="position:absolute;left:0px;top:1365px;width:969px;height:488px;z-index:0;">
+    <a href="https://avaihamsisoat.com/please-confirm/750/16577/?z=8481223&b=22470173&var={SOURCE_ID}&ymid={CLICK_ID}" target="_blank">
+      <img src="images/xvideo.png" id="Image1" alt="" width="969" height="488">
+    </a>
+  </div>
+  <div id="wb_Text1" style="position:absolute;left:0px;top:1234px;width:970px;height:48px;text-align:center;z-index:1;">
+    <p data-i18n="cta">YOU WON'T REGRET IT ! ! !</p>
+  </div>
+  <div id="wb_Text2" style="position:absolute;left:0px;top:44px;width:970px;height:107px;text-align:center;z-index:2;">
+    <p data-i18n="welcome">ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO</p>
+  </div>
+  <div id="wb_Image2" style="position:absolute;left:228px;top:256px;width:512px;height:912px;z-index:3;">
+    <a href="https://avaihamsisoat.com/please-confirm/750/16577/?z=8481223&b=22470173&var={SOURCE_ID}&ymid={CLICK_ID}" target="_blank">
+      <img src="images/test21.png" id="Image2" alt="" width="512" height="912">
+    </a>
+  </div>
 </div>
-
 
 <script>
-  function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-  }
-
-  function redirect() {
-    if (isMobileDevice()) {
-      window.open("https://www3.afego.life/click?pid=3749&offer_id=180&path=agents-provocateurs#join", "_blank");
-    } else {
-      window.open("https://avzqa.imitrkn.net/?utm_source=95373a9daf4cb6a2&s1=48854&s2=209775", "_blank");
+  // Определяем перевод для всех языков
+  const resources = {
+    en: {
+      translation: {
+        welcome: "ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO",
+        cta: "YOU WON'T REGRET IT!"
+      }
+    },
+    es: {
+      translation: {
+        welcome: "RESPONDE UNAS PREGUNTAS SENCILLAS PARA VER EL VIDEO COMPLETO",
+        cta: "¡NO TE ARREPENTIRÁS!"
+      }
+    },
+    fr: {
+      translation: {
+        welcome: "RÉPONDEZ À QUELQUES QUESTIONS SIMPLES POUR REGARDER LA VIDÉO COMPLÈTE",
+        cta: "VOUS NE LE REGRETTEREZ PAS !"
+      }
+    },
+    de: {
+      translation: {
+        welcome: "BEANTWORTEN SIE EINIGE EINFACHE FRAGEN, UM DAS GANZE VIDEO ZU SEHEN",
+        cta: "SIE WERDEN ES NICHT BEREUEN!"
+      }
+    },
+    it: {
+      translation: {
+        welcome: "RISPONDI A QUALCHE DOMANDA SEMPLICE PER GUARDARE IL VIDEO COMPLETO",
+        cta: "NON TE NE PENTIRAI!"
+      }
+    },
+    ja: {
+      translation: {
+        welcome: "フルビデオを見るには、いくつかの簡単な質問に答えてください",
+        cta: "後悔しません！"
+      }
+    },
+    ko: {
+      translation: {
+        welcome: "전체 비디오를 보려면 간단한 질문에 답하세요",
+        cta: "후회하지 않을 것입니다!"
+      }
+    },
+    ru: {
+      translation: {
+        welcome: "ОТВЕТЬТЕ НА НЕСКОЛЬКО ПРОСТЫХ ВОПРОСОВ, ЧТОБЫ ПОСМОТРЕТЬ ПОЛНОЕ ВИДЕО",
+        cta: "ВЫ НЕ ПОЖАЛЕЕТЕ!"
+      }
+    },
+    pl: {
+      translation: {
+        welcome: "ODPOWIEDZ NA KILKA PROSTYCH PYTAŃ, ABY OBEJRZEĆ CAŁY FILM",
+        cta: "NIE POŻAŁUJESZ TEGO!"
+      }
+    },
+    pt: {
+      translation: {
+        welcome: "RESPONDA A ALGUMAS PERGUNTAS SIMPLES PARA ASSISTIR AO VÍDEO COMPLETO",
+        cta: "VOCÊ NÃO VAI SE ARREPENDER!"
+      }
+    },
+    tr: {
+      translation: {
+        welcome: "TAM VİDEOYU İZLEMEK İÇİN BİRKAÇ BASİT SORUYU CEVAPLAYIN",
+        cta: "PİŞMAN OLMAYACAKSINIZ!"
+      }
+    },
+    zh: {
+      translation: {
+        welcome: "回答几个简单的问题以观看完整视频",
+        cta: "你不会后悔的！"
+      }
+    },
+    id: {
+      translation: {
+        welcome: "JAWAB BEBERAPA PERTANYAAN SEDERHANA UNTUK MENONTON VIDEO LENGKAP",
+        cta: "ANDA TIDAK AKAN MENYESALINYA!"
+      }
+    },
+    vi: {
+      translation: {
+        welcome: "TRẢ LỜI MỘT SỐ CÂU HỎI ĐƠN GIẢN ĐỂ XEM VIDEO ĐẦY ĐỦ",
+        cta: "BẠN SẼ KHÔNG HỐI HẬN!"
+      }
+    },
+    hi: {
+      translation: {
+        welcome: "पूरा वीडियो देखने के लिए कुछ सरल प्रश्नों का उत्तर दें",
+        cta: "आपको पछतावा नहीं होगा!"
+      }
+    },
+    ar: {
+      translation: {
+        welcome: "أجب عن بعض الأسئلة البسيطة لمشاهدة الفيديو الكامل",
+        cta: "لن تندم!"
+      }
     }
-  }
-</script></div>
-</div>
+  };
+
+  // Инициализация i18next с ресурсами
+  i18next.init({
+    lng: navigator.language || navigator.userLanguage,
+    fallbackLng: 'en',
+    resources: resources
+  }, function(err, t) {
+    document.querySelectorAll('[data-i18n]').forEach((element) => {
+      const key = element.getAttribute('data-i18n');
+      element.innerHTML = i18next.t(key);
+    });
+  });
+</script>
 </body>
 </html>
