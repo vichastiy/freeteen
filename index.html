@@ -3,38 +3,83 @@
 <head>
   <meta charset="utf-8">
   <title>Freeteen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Добавляем meta-тег для адаптивности -->
   <meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
   <link href="Безымянный2.css" rel="stylesheet">
   <link href="index.css" rel="stylesheet">
   <!-- Подключаем i18next -->
   <script src="https://unpkg.com/i18next@20.3.5/dist/umd/i18next.min.js"></script>
+  <style>
+    /* Основной контейнер для адаптивного центрирования */
+    #container {
+      max-width: 970px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+    }
+    /* Стили для текста и изображений для разных экранов */
+    #wb_Text1, #wb_Text2, #wb_Text3 {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 2.5vw; /* Применяем относительный размер для адаптации */
+      line-height: 1.2;
+      color: #FFFFFF;
+    }
+    #wb_Text1 strong, #wb_Text2 strong, #wb_Text3 strong {
+      color: #FFFF00;
+    }
+    /* Стили для изображений на разных устройствах */
+    #wb_Image1 img, #wb_Image2 img, #wb_Image3 img, #wb_Image4 img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Стили для кнопки */
+    #wb_Image4 {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    /* Мобильные стили */
+    @media only screen and (max-width: 768px) {
+      #wb_Text1, #wb_Text2, #wb_Text3 {
+        font-size: 5vw; /* Увеличиваем текст на мобильных */
+      }
+      #wb_Image1, #wb_Image2, #wb_Image3 {
+        width: 100%;
+        margin: auto;
+      }
+      #wb_Image4 img {
+        width: 50%; /* Кнопка занимает половину экрана на мобильных */
+      }
+    }
+  </style>
 </head>
 <body>
 <div id="space"><br></div>
 <div id="container">
-  <div id="wb_Text1" style="position:absolute;left:2px;top:30px;width:967px;height:77px;text-align:center;z-index:0;">
-    <span style="color:#FFFFFF;font-family:Arial;font-size:35px;" data-i18n="welcome"><strong>ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO</strong></span>
+  <div id="wb_Text1" style="margin-bottom: 20px;">
+    <span data-i18n="welcome"><strong>ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO</strong></span>
   </div>
-  <div id="wb_Text2" style="position:absolute;left:2px;top:131px;width:967px;height:77px;text-align:center;z-index:1;">
-    <span style="color:#FFFF00;font-family:Arial;font-size:35px;" data-i18n="registration"><strong>REGISTRATION IN TWO CLICKS<br>WITHOUT E-MAIL CONFIRMATION</strong></span>
+  <div id="wb_Text2" style="margin-bottom: 20px;">
+    <span data-i18n="registration"><strong>REGISTRATION IN TWO CLICKS<br>WITHOUT E-MAIL CONFIRMATION</strong></span>
   </div>
-  <div id="wb_Image1" style="position:absolute;left:229px;top:255px;width:512px;height:912px;z-index:2;">
+  <div id="wb_Image1" style="margin-bottom: 20px;">
     <a href="https://avaihamsisoat.com/please-confirm/750/16577/?z=8481223&b=22470173&var={SOURCE_ID}&ymid={CLICK_ID}" target="_blank">
-      <img src="images/test21.png" id="Image1" alt="" width="512" height="912">
+      <img src="images/test21.png" id="Image1" alt="">
     </a>
   </div>
-  <div id="wb_Text3" style="position:absolute;left:2px;top:1728px;width:967px;height:77px;text-align:center;z-index:3;">
-    <span style="color:#FFFF00;font-family:Arial;font-size:35px;" data-i18n="redirect"><strong>AUTO REDIRECT TO MORE THAN 380000<br>FULL VIDEOS</strong></span>
+  <div id="wb_Text3" style="margin-bottom: 20px;">
+    <span data-i18n="redirect"><strong>AUTO REDIRECT TO MORE THAN 380000<br>FULL VIDEOS</strong></span>
   </div>
-  <div id="wb_Image2" style="position:absolute;left:3px;top:1231px;width:967px;height:486px;z-index:4;">
-    <img src="images/xvideo.png" id="Image2" alt="" width="967" height="487">
+  <div id="wb_Image2" style="margin-bottom: 20px;">
+    <img src="images/xvideo.png" id="Image2" alt="">
   </div>
-  <div id="wb_Image3" style="position:absolute;left:135px;top:1880px;width:701px;height:1163px;z-index:5;">
-    <img src="images/1.png" id="Image3" alt="" width="701" height="1164">
+  <div id="wb_Image3" style="margin-bottom: 20px;">
+    <img src="images/1.png" id="Image3" alt="">
   </div>
-  <div id="wb_Image4" style="position:absolute;left:371px;top:3087px;width:231px;height:58px;z-index:6;">
+  <div id="wb_Image4">
     <a href="https://avaihamsisoat.com/please-confirm/750/16577/?z=8481223&b=22470173&var={SOURCE_ID}&ymid={CLICK_ID}" target="_blank">
-      <img src="images/CONFIRM 18+.png" id="Image4" alt="" width="231" height="58">
+      <img src="images/CONFIRM 18+.png" id="Image4" alt="">
     </a>
   </div>
 </div>
