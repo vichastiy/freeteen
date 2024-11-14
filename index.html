@@ -9,35 +9,33 @@
   <link href="index.css" rel="stylesheet">
   <script src="https://unpkg.com/i18next@20.3.5/dist/umd/i18next.min.js"></script>
   <style>
-    /* Основной контейнер */
+    /* Основной контейнер для адаптивного центрирования */
     #container {
-      max-width: 100%;
+      max-width: 970px;
       margin: 0 auto;
-      padding: 10px;
+      padding: 20px;
+      position: relative;
     }
-    /* Стили текста для мобильных с увеличением */
+    /* Стили для текста с сохранением исходных цветов и улучшенной адаптивностью */
     #wb_Text1, #wb_Text2, #wb_Text3 {
       text-align: center;
       font-family: Arial, sans-serif;
+      color: #FFFFFF;
       margin: 10px 0;
     }
     #wb_Text1 {
-      font-size: 3.5rem; /* Увеличено в 2.5 раза */
-      color: #FFFFFF;
+      font-size: 2rem; /* Основной размер для десктопа */
     }
     #wb_Text2, #wb_Text3 {
-      font-size: 2.5rem; /* Увеличено в 2.5 раза */
+      font-size: 1.8rem;
+      color: #FFFF00;
+    }
+    #wb_Text2 strong, #wb_Text3 strong {
       color: #FFFF00;
     }
     /* Адаптивные изображения */
-    #wb_Image1 img, #wb_Image2 img, #wb_Image3 img {
-      width: 100%;
-      height: auto;
-    }
-    /* Увеличение кнопки "CONFIRM 18+" */
-    #wb_Image4 img {
-      width: 100%;
-      max-width: 575px; /* Увеличено для мобильных */
+    #wb_Image1 img, #wb_Image2 img, #wb_Image3 img, #wb_Image4 img {
+      max-width: 100%;
       height: auto;
     }
     /* Центрирование кнопки */
@@ -46,9 +44,22 @@
       justify-content: center;
       margin: 20px 0;
     }
+    /* Мобильные стили для текста */
+    @media only screen and (max-width: 768px) {
+      #wb_Text1 {
+        font-size: 1.5rem; /* Уменьшенный размер на мобильных */
+      }
+      #wb_Text2, #wb_Text3 {
+        font-size: 1.4rem;
+      }
+      #wb_Image4 img {
+        width: 70%;
+      }
+    }
   </style>
 </head>
 <body>
+<div id="space"><br></div>
 <div id="container">
   <div id="wb_Text1">
     <span data-i18n="welcome"><strong>ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO</strong></span>
