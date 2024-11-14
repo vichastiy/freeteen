@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Freeteen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Добавляем meta-тег для адаптивности -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
   <link href="Безымянный2.css" rel="stylesheet">
   <link href="index.css" rel="stylesheet">
-  <!-- Подключаем i18next -->
   <script src="https://unpkg.com/i18next@20.3.5/dist/umd/i18next.min.js"></script>
   <style>
     /* Основной контейнер для адаптивного центрирования */
@@ -17,39 +16,44 @@
       padding: 20px;
       position: relative;
     }
-    /* Стили для текста и изображений для разных экранов */
+    /* Стили для текста с сохранением исходных цветов и улучшенной адаптивностью */
     #wb_Text1, #wb_Text2, #wb_Text3 {
       text-align: center;
       font-family: Arial, sans-serif;
-      font-size: 2.5vw; /* Применяем относительный размер для адаптации */
-      line-height: 1.2;
       color: #FFFFFF;
+      margin: 10px 0;
     }
-    #wb_Text1 strong, #wb_Text2 strong, #wb_Text3 strong {
+    #wb_Text1 {
+      font-size: 2rem; /* Основной размер для десктопа */
+    }
+    #wb_Text2, #wb_Text3 {
+      font-size: 1.8rem;
       color: #FFFF00;
     }
-    /* Стили для изображений на разных устройствах */
+    #wb_Text2 strong, #wb_Text3 strong {
+      color: #FFFF00;
+    }
+    /* Адаптивные изображения */
     #wb_Image1 img, #wb_Image2 img, #wb_Image3 img, #wb_Image4 img {
       max-width: 100%;
       height: auto;
     }
-    /* Стили для кнопки */
+    /* Центрирование кнопки */
     #wb_Image4 {
       display: flex;
       justify-content: center;
       margin: 20px 0;
     }
-    /* Мобильные стили */
+    /* Мобильные стили для текста */
     @media only screen and (max-width: 768px) {
-      #wb_Text1, #wb_Text2, #wb_Text3 {
-        font-size: 5vw; /* Увеличиваем текст на мобильных */
+      #wb_Text1 {
+        font-size: 1.5rem; /* Уменьшенный размер на мобильных */
       }
-      #wb_Image1, #wb_Image2, #wb_Image3 {
-        width: 100%;
-        margin: auto;
+      #wb_Text2, #wb_Text3 {
+        font-size: 1.4rem;
       }
       #wb_Image4 img {
-        width: 50%; /* Кнопка занимает половину экрана на мобильных */
+        width: 70%;
       }
     }
   </style>
@@ -57,24 +61,24 @@
 <body>
 <div id="space"><br></div>
 <div id="container">
-  <div id="wb_Text1" style="margin-bottom: 20px;">
+  <div id="wb_Text1">
     <span data-i18n="welcome"><strong>ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO</strong></span>
   </div>
-  <div id="wb_Text2" style="margin-bottom: 20px;">
+  <div id="wb_Text2">
     <span data-i18n="registration"><strong>REGISTRATION IN TWO CLICKS<br>WITHOUT E-MAIL CONFIRMATION</strong></span>
   </div>
-  <div id="wb_Image1" style="margin-bottom: 20px;">
+  <div id="wb_Image1">
     <a href="https://avaihamsisoat.com/please-confirm/750/16577/?z=8481223&b=22470173&var={SOURCE_ID}&ymid={CLICK_ID}" target="_blank">
       <img src="images/test21.png" id="Image1" alt="">
     </a>
   </div>
-  <div id="wb_Text3" style="margin-bottom: 20px;">
+  <div id="wb_Text3">
     <span data-i18n="redirect"><strong>AUTO REDIRECT TO MORE THAN 380000<br>FULL VIDEOS</strong></span>
   </div>
-  <div id="wb_Image2" style="margin-bottom: 20px;">
+  <div id="wb_Image2">
     <img src="images/xvideo.png" id="Image2" alt="">
   </div>
-  <div id="wb_Image3" style="margin-bottom: 20px;">
+  <div id="wb_Image3">
     <img src="images/1.png" id="Image3" alt="">
   </div>
   <div id="wb_Image4">
@@ -85,7 +89,6 @@
 </div>
 
 <script>
-  // Определяем переводы для языков TIER 1, 2 и 3
   const resources = {
     en: { translation: { welcome: "ANSWER A FEW SIMPLE QUESTIONS TO WATCH THE FULL VIDEO", registration: "REGISTRATION IN TWO CLICKS<br>WITHOUT E-MAIL CONFIRMATION", redirect: "AUTO REDIRECT TO MORE THAN 380000<br>FULL VIDEOS" }},
     es: { translation: { welcome: "RESPONDE UNAS PREGUNTAS SENCILLAS PARA VER EL VIDEO COMPLETO", registration: "REGISTRO EN DOS CLICS<br>SIN CONFIRMACIÓN DE CORREO ELECTRÓNICO", redirect: "REDIRECCIÓN AUTOMÁTICA A MÁS DE 380000<br>VIDEOS COMPLETOS" }},
@@ -101,7 +104,6 @@
     ko: { translation: { welcome: "전체 비디오를 보려면 간단한 질문에 답변하세요", registration: "이메일 확인 없이 두 번 클릭으로 등록", redirect: "38만 개 이상의 전체 비디오로 자동 리디렉션" }}
   };
 
-  // Инициализация i18next с ресурсами
   i18next.init({
     lng: navigator.language || navigator.userLanguage,
     fallbackLng: 'en',
