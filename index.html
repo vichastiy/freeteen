@@ -29,30 +29,33 @@
     #wb_Image1 {
         left: 0;
         top: 0;
-        width: 100%;
-        height: auto;
+        width: 1266px; /* Исходный размер для десктопов */
+        height: 637px;
     }
 
     #wb_Image2 {
-        left: 50%;
-        top: 70%;
-        transform: translateX(-50%);
-        width: 80%;
-        max-width: 332px;
-        height: auto;
+        left: 470px;
+        top: 637px;
+        width: 332px; /* Исходный размер для десктопов */
+        height: 511px;
     }
 
-    /* Медиа-запросы для адаптации на мобильных устройствах */
+    /* Медиа-запросы для мобильных устройств */
     @media (max-width: 768px) {
         #wb_Image1 {
-            width: 100%;
-            height: auto;
+            width: 100%; /* Изменим на 100% ширины экрана */
+            height: auto; /* Пропорциональное изменение высоты */
+            left: 0;
+            top: 0;
         }
 
         #wb_Image2 {
-            width: 90%;
-            max-width: 280px;
-            top: 80%;
+            left: 50%; /* Центрируем картинку */
+            top: 70%; /* Позиция ниже, чтобы не перекрывать первое изображение */
+            width: 80%; /* Уменьшаем ширину для мобильных устройств */
+            max-width: 332px; /* Не даем картинке выходить за пределы */
+            transform: translateX(-50%); /* Центрируем по горизонтали */
+            height: auto; /* Пропорционально изменяем высоту */
         }
     }
 
@@ -60,12 +63,15 @@
         #wb_Image1 {
             width: 100%;
             height: auto;
+            left: 0;
+            top: 0;
         }
 
         #wb_Image2 {
             width: 90%;
-            max-width: 250px;
-            top: 85%;
+            max-width: 280px;
+            top: 80%;
+            transform: translateX(-50%);
         }
     }
 </style>
