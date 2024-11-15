@@ -1,19 +1,92 @@
 <!doctype html>
-<html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <title>FreexxxL</title>
 <meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
 <link href="Безымянный1.css" rel="stylesheet">
 <link href="index.css" rel="stylesheet">
+<style>
+    /* Общие стили для body */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    #container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Стили для изображений */
+    #wb_Image1, #wb_Image2 {
+        position: absolute;
+        z-index: 1;
+    }
+
+    #wb_Image1 {
+        left: 3px;
+        top: 1px;
+        width: 1645px; /* Исходный размер для десктопов */
+        height: 828px;
+    }
+
+    #wb_Image2 {
+        left: 583px; /* Позиция для десктопов */
+        top: 829px; /* Позиция для десктопов */
+        width: 485px; /* Исходный размер для десктопов */
+        height: 746px; /* Исходный размер для десктопов */
+    }
+
+    /* Медиа-запросы для мобильных устройств */
+    @media (max-width: 768px) {
+        #wb_Image1 {
+            width: 100%; /* Изображение на всю ширину экрана */
+            height: auto; /* Пропорциональное изменение высоты */
+            left: 0;
+            top: 0;
+        }
+
+        #wb_Image2 {
+            width: 100%; /* Изображение на всю ширину экрана */
+            height: auto; /* Пропорциональное изменение высоты */
+            left: 0;
+            top: 100%; /* Второе изображение расположено ниже первого */
+        }
+    }
+
+    @media (max-width: 480px) {
+        #wb_Image1 {
+            width: 100%;
+            height: auto;
+            left: 0;
+            top: 0;
+        }
+
+        #wb_Image2 {
+            width: 100%;
+            height: auto;
+            left: 0;
+            top: 100%;
+        }
+    }
+</style>
 </head>
 <body>
 <div id="space"><br></div>
 <div id="container">
-<div id="wb_Image1" style="position:absolute;left:3px;top:1px;width:1645px;height:828px;z-index:0;">
-<a href="https://avzqa.imitrkn.net/?utm_source=95373a9daf4cb6a2&s1=48854&s2=209775"><img src="images/xvideo.png" id="Image1" alt="" width="1645" height="828"></a></div>
-<div id="wb_Image2" style="position:absolute;left:583px;top:829px;width:485px;height:746px;z-index:1;">
-<a href="https://avzqa.imitrkn.net/?utm_source=95373a9daf4cb6a2&s1=48854&s2=209775"><img src="images/BONGA  IMONET REG.png" id="Image2" alt="" width="485" height="746"></a></div>
+    <div id="wb_Image1">
+        <a href="https://avzqa.imitrkn.net/?utm_source=95373a9daf4cb6a2&s1=48854&s2=209775">
+            <img src="images/xvideo.png" id="Image1" alt="Image 1" width="1645" height="828">
+        </a>
+    </div>
+    <div id="wb_Image2">
+        <a href="https://avzqa.imitrkn.net/?utm_source=95373a9daf4cb6a2&s1=48854&s2=209775">
+            <img src="images/BONGA  IMONET REG.png" id="Image2" alt="Image 2" width="485" height="746">
+        </a>
+    </div>
 </div>
 </body>
 </html>
