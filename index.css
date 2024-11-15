@@ -6,13 +6,13 @@ div#space
 {
    width: 1px;
    height: 50%;
-   margin-bottom: -800px;
+   margin-bottom: -500px;
    float:left
 }
 div#container
 {
-   width: 1650px;
-   height: 1600px;
+   width: 994px;
+   height: 1000px;
    margin: 0 auto;
    position: relative;
    clear: left;
