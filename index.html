@@ -13,7 +13,7 @@
         padding: 0;
         font-family: Arial, sans-serif;
     }
-    
+
     #container {
         position: relative;
         width: 100%;
@@ -27,35 +27,34 @@
     }
 
     #wb_Image1 {
-        left: 0;
-        top: 0;
+        left: 3px;
+        top: 0px;
         width: 1266px; /* Исходный размер для десктопов */
         height: 637px;
     }
 
     #wb_Image2 {
-        left: 470px;
-        top: 637px;
+        left: 470px; /* Позиция для десктопа */
+        top: 680px; /* Позиция для десктопа */
         width: 332px; /* Исходный размер для десктопов */
-        height: 511px;
+        height: 511px; /* Исходный размер для десктопов */
     }
 
     /* Медиа-запросы для мобильных устройств */
     @media (max-width: 768px) {
         #wb_Image1 {
-            width: 100%; /* Изменим на 100% ширины экрана */
+            width: 100%; /* Изображение на всю ширину экрана */
             height: auto; /* Пропорциональное изменение высоты */
             left: 0;
             top: 0;
         }
 
         #wb_Image2 {
-            left: 50%; /* Центрируем картинку */
-            top: 70%; /* Позиция ниже, чтобы не перекрывать первое изображение */
-            width: 80%; /* Уменьшаем ширину для мобильных устройств */
-            max-width: 332px; /* Не даем картинке выходить за пределы */
-            transform: translateX(-50%); /* Центрируем по горизонтали */
-            height: auto; /* Пропорционально изменяем высоту */
+            width: 200%; /* Увеличиваем второе изображение в 2 раза */
+            max-width: 664px; /* Ограничиваем максимальной шириной */
+            height: auto; /* Пропорциональная высота */
+            left: 0;
+            top: 100%; /* Позиция второго изображения ниже первого */
         }
     }
 
@@ -68,10 +67,11 @@
         }
 
         #wb_Image2 {
-            width: 90%;
-            max-width: 280px;
-            top: 80%;
-            transform: translateX(-50%);
+            width: 200%; /* Увеличиваем второе изображение в 2 раза */
+            max-width: 664px; /* Ограничиваем максимальной шириной */
+            height: auto;
+            left: 0;
+            top: 100%; /* Позиция второго изображения ниже первого */
         }
     }
 </style>
@@ -81,12 +81,12 @@
 <div id="container">
     <div id="wb_Image1">
         <a href="https://avzqa.imitrkn.net/?utm_source=95373a9daf4cb6a2&s1=48854&s2=209775">
-            <img src="images/xvideo.png" id="Image1" alt="Image 1">
+            <img src="images/xvideo.png" id="Image1" alt="Image 1" width="1266" height="637">
         </a>
     </div>
     <div id="wb_Image2">
         <a href="https://avzqa.imitrkn.net/?utm_source=95373a9daf4cb6a2&s1=48854&s2=209775">
-            <img src="images/BONGA  IMONET REG.png" id="Image2" alt="Image 2">
+            <img src="images/BONGA  IMONET REG.png" id="Image2" alt="Image 2" width="332" height="511">
         </a>
     </div>
 </div>
